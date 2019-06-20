@@ -21,5 +21,4 @@ matrix:
     - node_js: "12"
       env: FULL_RUN=true
 script:
-  - if [ "$FULL_RUN" == "false" ]; then npm test; fi
-  - if [ "$FULL_RUN" != "false" ]; then npm test; sonar-scanner; fi
+  - if [ "$FULL_RUN" != "false" ]; then sonar-scanner; fi
