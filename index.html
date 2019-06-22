@@ -18,24 +18,51 @@
         </ol>
         <img alt="framework" src="img/framework.png">
         <h1>Core</h1>
-        <h2>What</h2>
-        <p>The core project has three main responsibilities and does not rely on any special test engine or protocol:</p>
-        <h3>Assertions</h3>
+        <h3>What</h3>
+        <p>The core project has three main responsibilities and does not rely on any special test engine or protocol:
+        </p>
+        <h4>Assertions</h4>
         <p>A big library with all the base assertions such as arrays, lists and primitives.</p>
-        <h3>Interfaces</h3>
+        <h4>Interfaces</h4>
         <p>Interfaces such as Executor, Node and Server.</p>
-        <h3>Setup</h3>
+        <h4>Setup</h4>
         <p>Support for fixtures and other setup-related functionality.</p>
-        <h2>Why</h2>
+        <h3>Why</h3>
         <p>
         The framework does not rely on any specific test engine or protocol.<br>
             It is built to be able to be easy to use, extend and maintain.</p>
-        <h2>How</h2>
-        <p>This is possible due to highly use of interfaces and almost none of the implementation classes are exposed to the public.</p>
-        <p>The core project does not know anything about the test engine or protocols implemented, which makes the project very isolated.</p>
-        <h2>Where</h2>
-        <p>The project is found <a href="https://github.com/HenryssonDaniel/teacup-java-core">here</a>:</p>
+        <h3>How</h3>
+        <p>This is possible due to highly use of interfaces and almost none of the implementation classes are exposed
+            to the public.</p>
+        <p>The core project does not know anything about the test engine or protocols implemented, which makes the
+            project very isolated.</p>
+        <h3>Where</h3>
+        <p>The project is found <a href="https://github.com/HenryssonDaniel/teacup-java-core" title="core">here</a>:</p>
         <h1>Engine</h1>
+        <h2>JUnit</h2>
+        <h3>What</h3>
+        <p>Custom JUnit 5 engine.<br>
+            This engine interacts with the Teacup core project to get fixture data, such as the current fixture and
+            added clients/servers.</p>
+        <h3>Why</h3>
+        <p>It can be time and resource consuming to use fixtures.<br>
+            Therefore this engine will change the order of the tests before executing them so that the minimal fixture
+            changes are required.</p>
+        <h3>How</h3>
+        <p>This is done by extending the Jupiter engine.<br><br>
+            To use the Teacup engine, do as follows:<br></p>
+        <ol>
+            <li>Create a file named org.junit.platform.engine.TestEngine in src/main/resources/META-INF/services</li>
+            <li>Add the content org.teacup.engine.junit.TeacupTestEngine</li>
+            <li>Add the engine to the build file, this is different depending on the build tool you are using.<br>
+                The best thing is to check this
+                <a href="https://junit.org/junit5/docs/current/user-guide/#running-tests-build" title="guide">
+                    guide</a>:</li>
+            <li>Write your tests as you would normally do with JUnit.</li>
+        </ol>
+        <h3>Where</h3>
+        <p>The project is found <a href="https://github.com/HenryssonDaniel/teacup-java-engine-junit" title="junit">
+            here</a>:</p>
         <h1>Protocol</h1>
         <h1>Report</h1>
         <h1>Visualization</h1>
