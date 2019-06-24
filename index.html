@@ -16,8 +16,48 @@
             <li>Choose protocol(s)</li>
             <li>Choose reporter(s)</li>
         </ol>
-        <img alt="framework" src="img/framework.png">
-        <h1>Core</h1>
+        <img alt="framework" src="img/framework.png"><br>
+        <ul>
+            <li><a href="#core" title="Core">Core</a></li>
+            <li>
+                <a href="#engine" title="engine">Engine</a>
+                <ul>
+                    <li><a href="#engine-junit" title="Engine JUnit">JUnit</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#protocol" title="protocol">Protocol</a>
+                <ul>
+                    <li><a href="#protocol-http" title="Protocol HTTP">HTTP</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#report" title="report">Report</a>
+                <ul>
+                    <li><a href="#report-file" title="Report file">File</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#report-mysql" title="Report MySQL">MySQL</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#visualization" title="Visualization">Visualization</a>
+                <ul>
+                    <li><a href="#visualization-back" title="Visualization back">Back-end</a></li>
+                </ul>
+                <ul>
+                    <li><a href="#visualization-front" title="Visualization front">Front-end</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#service" title="service">Service</a>
+                <ul>
+                    <li><a href="#service-mysql" title="Service MySQL">MySQL</a></li>
+                </ul>
+            </li>
+            <li><a href="#example" title="Example">Example</a></li>
+        </ul>
+        <h1 id="core">Core</h1>
         <h3>What</h3>
         <p>The core project has three main responsibilities and does not rely on any special test engine or protocol:
         </p>
@@ -38,8 +78,8 @@
             project very isolated.</p>
         <h3>Where</h3>
         <p>The project is found <a href="https://github.com/HenryssonDaniel/teacup-java-core" title="core">here</a>:</p>
-        <h1>Engine</h1>
-        <h2>JUnit</h2>
+        <h1 id="engine">Engine</h1>
+        <h2 id="engine-junit">JUnit</h2>
         <h3>What</h3>
         <p>Custom JUnit 5 engine.<br>
             This engine interacts with the Teacup core project to get fixture data, such as the current fixture and
@@ -63,8 +103,8 @@
         <h3>Where</h3>
         <p>The project is found <a href="https://github.com/HenryssonDaniel/teacup-java-engine-junit" title="junit">
             here</a>:</p>
-        <h1>Protocol</h1>
-        <h2>HTTP</h2>
+        <h1 id="protocol">Protocol</h1>
+        <h2 id="protocol-http">HTTP</h2>
         <h3>What</h3>
         <p>HTTP version 1.1 and 2 support.<br><br>
         The framework supports asynchronously and synchronously requests.<br><br>
@@ -80,8 +120,8 @@
         <h3>Where</h3>
         <p>The project is found <a href="https://github.com/HenryssonDaniel/teacup-java-protocol-http"
                                    title="http">here</a>:</p>
-        <h1>Report</h1>
-        <h2>File</h2>
+        <h1 id="report">Report</h1>
+        <h2 id="report-file">File</h2>
         <h3>What</h3>
         <p>This project makes it possible to save logs on disc rather than just publish on the screen.</p>
         <h3>Why</h3>
@@ -97,7 +137,7 @@
         <h3>Where</h3>
         <p>The project is found <a href="https://github.com/HenryssonDaniel/teacup-java-report-file"
                                    title="file">here</a>:</p>
-        <h2>MySQL</h2>
+        <h2 id="report-mysql">MySQL</h2>
         <h3>What</h3>
         <p>This project makes it possible to save logs in a MySQL database rather than just publish on the screen.</p>
         <h3>Why</h3>
@@ -120,8 +160,8 @@
         <h3>Where</h3>
         <p>The project is found <a href="https://github.com/HenryssonDaniel/teacup-java-report-mysql"
                                    title="mysql">here</a>:</p>
-        <h1>Visualization</h1>
-        <h2>Back-end</h2>
+        <h1 id="visualization">Visualization</h1>
+        <h2 id="visualization-back">Back-end</h2>
         <h3>What</h3>
         <p>Visualization web back-end written in Python.</p>
         <h4>Why</h4>
@@ -133,7 +173,7 @@
         <h3>Where</h3>
         <p>The project is found <a href="https://github.com/HenryssonDaniel/teacup-visualization-web-back-python"
                                    title="back">here</a>:</p>
-        <h2>Front-end</h2>
+        <h2 id="visualization-front">Front-end</h2>
         <h3>What</h3>
         <p>Web front-end.</p>
         <h4>Why</h4>
@@ -143,8 +183,8 @@
         <h3>Where</h3>
         <p>The project is found <a href="https://github.com/HenryssonDaniel/teacup-visualization-web-front"
                                    title="front">here</a>:</p>
-        <h1>Service</h1>
-        <h2>MySQL</h2>
+        <h1 id="service">Service</h1>
+        <h2 id="service-mysql">MySQL</h2>
         <h3>What</h3>
         <p>This project makes it possible to interact with a MySQL database to be used in the visualization
             projects.</p>
@@ -159,7 +199,7 @@
         <h3>Where</h3>
         <p>The project is found <a href="https://github.com/HenryssonDaniel/teacup-service-visualization-mysql-java"
                                    title="mysql">here</a>:</p>
-        <h1>Example</h1>
+        <h1 id="example">Example</h1>
         <h3>What</h3>
         <p>Examples using the JUnit test engine.</p>
         <h3>Why</h3>
