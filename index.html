@@ -78,8 +78,8 @@
             The Simple interface holds all the functionality that the HTTP server can do.<br>
             New servers can be created with the Factory class in the server package.</p>
         <h3>Where</h3>
-        <p>The project is found
-            <a href="https://github.com/HenryssonDaniel/teacup-java-protocol-http" title="http">here</a>:</p>
+        <p>The project is found <a href="https://github.com/HenryssonDaniel/teacup-java-protocol-http"
+                                   title="http">here</a>:</p>
         <h1>Report</h1>
         <h2>File</h2>
         <h3>What</h3>
@@ -95,8 +95,8 @@
             <li>Add reporter=io.githb.henryssondaniel.teacup.report.file.DefaultReporter to the file</li>
         </ol>
         <h3>Where</h3>
-        <p>The project is found
-            <a href="https://github.com/HenryssonDaniel/teacup-java-report-file" title="file">here</a>:</p>
+        <p>The project is found <a href="https://github.com/HenryssonDaniel/teacup-java-report-file"
+                                   title="file">here</a>:</p>
         <h2>MySQL</h2>
         <h3>What</h3>
         <p>This project makes it possible to save logs in a MySQL database rather than just publish on the screen.</p>
@@ -118,8 +118,8 @@
             </li>
         </ol>
         <h3>Where</h3>
-        <p>The project is found
-            <a href="https://github.com/HenryssonDaniel/teacup-java-report-mysql" title="mysql">here</a>:</p>
+        <p>The project is found <a href="https://github.com/HenryssonDaniel/teacup-java-report-mysql"
+                                   title="mysql">here</a>:</p>
         <h1>Visualization</h1>
         <h2>Back-end</h2>
         <h3>What</h3>
@@ -131,9 +131,8 @@
         <p>Follow this <a href="http://flask.pocoo.org/docs/1.0/tutorial/deploy/" title="flask">guide</a> to deploy to
             production.</p>
         <h3>Where</h3>
-        <p>The project is found
-            <a href="https://github.com/HenryssonDaniel/teacup-visualization-web-back-python"
-               title="back">here</a>:</p>
+        <p>The project is found <a href="https://github.com/HenryssonDaniel/teacup-visualization-web-back-python"
+                                   title="back">here</a>:</p>
         <h2>Front-end</h2>
         <h3>What</h3>
         <p>Web front-end.</p>
@@ -142,8 +141,8 @@
         <h3>How</h3>
         <p>Deploy the application on your web server.</p>
         <h3>Where</h3>
-        <p>The project is found
-            <a href="https://github.com/HenryssonDaniel/teacup-visualization-web-front" title="front">here</a>:</p>
+        <p>The project is found <a href="https://github.com/HenryssonDaniel/teacup-visualization-web-front"
+                                   title="front">here</a>:</p>
         <h1>Service</h1>
         <h2>MySQL</h2>
         <h3>What</h3>
@@ -158,8 +157,44 @@
             <li>Start the service by running: gradle run</li>
         </ul>
         <h3>Where</h3>
-        <p>The project is found
-            <a href="https://github.com/HenryssonDaniel/teacup-service-visualization-mysql-java"
-               title="mysql">here</a>:</p>
+        <p>The project is found <a href="https://github.com/HenryssonDaniel/teacup-service-visualization-mysql-java"
+                                   title="mysql">here</a>:</p>
+        <h1>Example</h1>
+        <h3>What</h3>
+        <p>Examples using the JUnit test engine.</p>
+        <h3>Why</h3>
+        <p>It can be used as a reference to set up and write your first test case.</p>
+        <h3>How</h3>
+        <h4>Add the dependencies</h4>
+        <p>It has three dependencies:</p>
+        <ul>
+            <li>Core (io.github.henryssondaniel.teacup:core)</li>
+            <li>JUnit test engine (io.github.henryssondaniel.teacup.engine:junit)</li>
+            <li>HTTP protocol (io.github.henryssondaniel.teacup.protocol:http)</li>
+        </ul>
+        <h4>Add the test engine</h4>
+        <ul>
+            <li>Create a file named io.github.henryssondaniel.junit.platform.engine.TestEngine in
+                src/main/resources/META-INF/services</li>
+            <li>Add the content io.github.henryssondaniel.teacup.engine.junit.TeacupTestEngine</li>
+            <li>Add the engine to the build file, this is different depending on the build tool you are using.</li>
+            <li>The best thing is to check: https://junit.org/junit5/docs/current/user-guide/#running-tests-build</li>
+        </ul>
+        <h4>Write your test (pseudocode)</h4>
+        <p>Writing your test can be divided into three steps:</p>
+        <ul>
+            <li>response = client.send(request) // send the request</li>
+            <li>node = responseBuilder.setStatusCode(statusCode).setVersion(version).build() // define the
+                assertions</li>
+            <li>node.verify(response) // verify</li>
+        </ul>
+        <p>All assertions can be chained and all setters take an assertion rather than a value.<br>
+            This means that statusCode and version represents assertions as well. The code could look similar to this:
+            <br>statusCode = integerBuilder.isLessThan(300).isGreaterThanOrEqualTo(200).build()<br>
+            version = versionBuilder.isSameAs(Version.2).build()
+        </p>
+        <h3>Where</h3>
+        <p>The project is found <a href="https://github.com/HenryssonDaniel/teacup-java-example-junit"
+                                   title="example">here</a>:</p>
     </body>
 </html>
