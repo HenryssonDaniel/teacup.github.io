@@ -73,13 +73,53 @@
         <p>This makes it possible to test HTTP with the framework, both the client and the server.</p>
         <h3>How</h3>
         <p>Add this repository as a dependency.<br><br>
-        The Simple interface holds all the functionality that the HTTP client can do.<br>
-        New clients can be created with the Factory class in the client package.<br><br>
-        The Simple interface holds all the functionality that the HTTP server can do.<br>
-        New servers can be created with the Factory class in the server package.
+            The Simple interface holds all the functionality that the HTTP client can do.<br>
+            New clients can be created with the Factory class in the client package.<br><br>
+            The Simple interface holds all the functionality that the HTTP server can do.<br>
+            New servers can be created with the Factory class in the server package.</p>
         <h3>Where</h3>
-        <p>The project is found <a href="https://github.com/HenryssonDaniel/teacup-java-protocol-http " title="core">here</a>:</p>
+        <p>The project is found
+            <a href="https://github.com/HenryssonDaniel/teacup-java-protocol-http" title="http">here</a>:</p>
         <h1>Report</h1>
+        <h2>File</h2>
+        <h3>What</h3>
+        <p>This project makes it possible to save logs on disc rather than just publish on the screen.</p>
+        <h3>Why</h3>
+        <p>Save the logs on disc so that they are not deleted after each test execution, no matter what test engine
+            you are using.</p>
+        <h3>How</h3>
+        <p>Follow the steps below:</p>
+        <ol>
+            <li>Add this repository as a dependency</li>
+            <li>Create a file named teacup.properties in a folder named .teacup in your home folder</li>
+            <li>Add reporter=io.githb.henryssondaniel.teacup.report.file.DefaultReporter to the file</li>
+        </ol>
+        <h3>Where</h3>
+        <p>The project is found
+            <a href="https://github.com/HenryssonDaniel/teacup-java-report-file" title="file">here</a>:</p>
+        <h2>MySQL</h2>
+        <h3>What</h3>
+        <p>This project makes it possible to save logs in a MySQL database rather than just publish on the screen.</p>
+        <h3>Why</h3>
+        <p>Save the logs to a MySQL database so that they are not deleted after each test execution, no matter what
+            test engine you are using.</p>
+        <h3>How</h3>
+        <p>Follow the steps below:</p>
+        <ol>
+            <li>Add this repository as a dependency</li>
+            <li>Create a file named teacup.properties in a folder named .teacup in your home folder</li>
+            <li>Add reporter=io.githb.henryssondaniel.teacup.report.mysql.DefaultReporter to the file</li>
+            <li>Also add
+                <ol>
+                    <li>reporter.mysql.password=[password]</li>
+                    <li>reporter.mysql.server.name=[name]</li>
+                    <li>reporter.mysql.user=[user]</li>
+                </ol>
+            </li>
+        </ol>
+        <h3>Where</h3>
+        <p>The project is found
+            <a href="https://github.com/HenryssonDaniel/teacup-java-report-mysql" title="mysql">here</a>:</p>
         <h1>Visualization</h1>
         <h1>Service</h1>
     </body>
